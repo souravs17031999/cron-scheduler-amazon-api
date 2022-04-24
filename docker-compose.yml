@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  cron_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - AMAZON_API_KEY
+      - TWILIO_ACCOUNT_SID
+      - TWILIO_AUTH_TOKEN
+      - TWILIO_PHONE_SENDER
+      - TWILIO_PHONE_RECEIVER
+      - AMAZON_PRODUCT_ID
+      - AMAZON_TRIGGER_HIGH_LIMIT
+      - AMAZON_TRIGGER_LOW_LIMIT
+      - CRON_INTERVAL_SECONDS
